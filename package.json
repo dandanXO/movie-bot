@@ -1,0 +1,19 @@
+{
+  "name": "line-chatbot",
+  "version": "0.1.1",
+  "description": "movie search ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "line",
+    "bot"
+  ],
+  "author": "Dandan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "linebot": "^1.4.1"
+  }
+}
