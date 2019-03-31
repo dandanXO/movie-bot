@@ -8,24 +8,24 @@ Quick know the last movie info.
 Want make a chat bot can search what movie you want and get the last movie list show in bot dialogue. 
 Also get the program list from local theater, bot can provid the local theater schedule for user.
 
-## Requirements
+## Requirements :pushpin:
 
 You need to have a recent version of NodeJS installed. See the [Setup](https://nodejs.org/en/) page for more information.
 
-## Built With
+## Built With :pushpin:
 - [express](https://expressjs.com/)-The web framework used
 - [linebot](https://github.com/boybundit/linebot)-Line api used
 
-## Contributing
+## Contributing :pushpin:
 
 Please connect Dandan for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Authors
+## Authors :pushpin:
 - Dan __*initial work*__ 
 
 
 # To do
 - [x] line bot start
 - [x] add ssl for express
-- [ ] web crawler for movie data
-- [ ] bot string analysis
+- [ ] web crawler for movie data :point_left: next
+- [ ] bot string analysis 
