@@ -4,7 +4,7 @@
   "description": "movie search ",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,8 +14,10 @@
   "author": "Dandan",
   "license": "ISC",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.4",
     "linebot": "^1.4.1",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "superagent": "^5.0.2"
   }
 }
