@@ -21,7 +21,8 @@ You need to have a recent version of NodeJS installed. See the [Setup](https://n
 Please connect Dandan for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors :pushpin:
-- Dan __*initial work*__ 
+- Dan __*initial work and dev*__
+- Frank __*Refactoring and debuging*__
 
 
 # To do
