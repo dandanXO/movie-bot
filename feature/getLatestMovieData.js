@@ -15,9 +15,6 @@ module.exports.getLatestMovieData = async function () {
                     let res = await superagent.get(`http://www.atmovies.com.tw${latestMovie[item].attribs.value.trim()}`)
                     let $ = await cheerio.load(res.text)
                     let youtubeUrl = await $('.video_view iframe').attr('src')
-                    // await console.log(latestMovie[item].children[0].data.trim())
-                    // await console.log(`http://www.atmovies.com.tw${latestMovie[item].attribs.value.trim()}`)
-                    // await console.log(youtubeUrl)
                     await data.push({
                         name: latestMovie[item].children[0].data.trim(),
                         introductionUrl: `http://www.atmovies.com.tw${latestMovie[item].attribs.value.trim()}`,
