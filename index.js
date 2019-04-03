@@ -27,7 +27,7 @@ const getMovieLocalTherterAndTime = require('./feature/getMovieLocalTherterAndTi
 bot.on('message', function (event) {
     
     console.log(event)
-    if(event.message.type=='message'){
+    if(event.message.type=='text'){
     const askLatestMovie = event.message.text.match(/最新電影/);
     const movielocal = event.message.text.match(/場次|地點/)
         if (movielocal) {
@@ -77,13 +77,14 @@ bot.on('message', function (event) {
             getLatestMovie.getLatestMovieData()
                 .then((data) => {
                     let replys = []
-                    let forloop = (Number.parseInt(data.length / 15)) <= 0 ? 1 : (Number.parseInt(data.length / 15));
+                    let forloop = (Number.parseInt(data.length / 10)) <= 0 ? 1 : (Number.parseInt(data.length / 10));
+                    console.log(data)
                     if (forloop > 4) {
                         forloop = 4
                     }
                     for (let k = 0; k < forloop; k++) {
                         let reply = ''
-                        for (let i = k * 15; i < 15 * (k + 1); i++) {
+                        for (let i = k * 10; i < 10 * (k + 1); i++) {
                             reply = reply + `
     電影名稱: ${data[i].name}
     電影詳細介紹: ${data[i].introductionUrl}
