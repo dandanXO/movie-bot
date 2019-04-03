@@ -28,15 +28,9 @@ const getMovieLocalTherterAndTime = require('./feature/getMovieLocalTherterAndTi
 bot.on('message', function (event) {
 
     console.log(event)
-<<<<<<< HEAD
-    if(event.message.type=='text'){
-    const askLatestMovie = event.message.text.match(/最新電影/);
-    const movielocal = event.message.text.match(/場次|地點/)
-=======
     if (event.message.type == 'text') {
         const askLatestMovie = event.message.text.match(/最新電影/);
         const movielocal = event.message.text.match(/場次|地點/);
->>>>>>> FrankLin3501-dev
         if (movielocal) {
             const messages = event.message.text.split(' ');
             getMovieLocalTherterAndTime.getMovieLocalTherterAndTime(messages[1], messages[2])
@@ -93,20 +87,11 @@ bot.on('message', function (event) {
                     }
                     for (let k = 0; k < forloop; k++) {
                         let reply = ''
-<<<<<<< HEAD
-                        for (let i = k * 10; i < 10 * (k + 1); i++) {
-                            reply = reply + `
-    電影名稱: ${data[i].name}
-    電影詳細介紹: ${data[i].introductionUrl}
-    電影預告片: ${data[i].youtubeUrl}
-    `
-=======
                         for (let i = k * 15; i < 15 * (k + 1); i++) {
                             reply = reply +
                                 `電影名稱: ${data[i].name}\n` +
                                 `電影詳細介紹: ${data[i].introductionUrl}\n` +
                                 `電影預告片: ${data[i].youtubeUrl}\n`;
->>>>>>> FrankLin3501-dev
                         }
                         replys.push(reply);
                     }
