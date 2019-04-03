@@ -9,15 +9,9 @@ var caPath = './config/ca_bundle.pem'
 var keyPath = './config/private.key';
 var certPath = './config/certificate.pem';
 var caPath = './config/ca_bundle.pem'
-<<<<<<< HEAD
-var hskey = fs.readFileSync(keyPath,'utf8');
-var hscert = fs.readFileSync(certPath,'utf8');
-var hsca = fs.readFileSync(caPath,'utf8')
-=======
 var hskey = fs.readFileSync(keyPath);
 var hscert = fs.readFileSync(certPath);
 var hsca = fs.readFileSync(caPath, 'utf8')
->>>>>>> dev
 
 let bot = linebot({
     channelId: lineSecret.channelId,
