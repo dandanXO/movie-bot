@@ -71,13 +71,12 @@ bot.on('message', function (event) {
                 .then((data) => {
                     let replys = []
                     let forloop = (Number.parseInt(data.length / 10)) <= 0 ? 1 : (Number.parseInt(data.length / 10));
-                    console.log(data)
                     if (forloop > 4) {
                         forloop = 4
                     }
                     for (let k = 0; k < forloop; k++) {
                         let reply = ''
-                        for (let i = k * 15; i < 15 * (k + 1); i++) {
+                        for (let i = k * 10; i < 10 * (k + 1); i++) {
                             reply = reply +
                                 `電影名稱: ${data[i].name}\n` +
                                 `電影詳細介紹: ${data[i].introductionUrl}\n` +

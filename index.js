@@ -13,9 +13,9 @@ const hsca = fs.readFileSync(PATH_CA_BUNDLE, 'utf8');
 
 //routes
 const lineBot = require('./bot/line/index');
-
+const telegramBot = require('./bot/telegram/index')
 app.use('/line',lineBot)
-
+app.use('/telegram',telegramBot)
 // 在 localhost 走 ssl 443 port
 const server = https.createServer({
     ca: hsca,
