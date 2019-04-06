@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-
 const TelegramBot = require('node-telegram-bot-api');
 
+const teltgramSecret = require('../../config/telegramSecret.json');
+
 // api token
-const token = '807292662:AAENotmD5rIAQ76wySZEuz-owacLEic6OlY';
+const token = teltgramSecret.token;
 
 const bot = new TelegramBot(token, { polling: true });
 
