@@ -43,13 +43,36 @@ bot.onText(/(場次|地點) (.+) (.+)/, (msg, match) => {
     getMovieLocalTherterAndTime.getMovieLocalTherterAndTime(match[2], match[3])
     .then(data => {
         bot.sendMessage(chatId,'久等了~ 使用方式 E.g: 場次 {電影名稱} {縣市名稱}')
-        let replay = ''
-        for (let i = 0; i < data.length; i++) {
-            replay = replay + `時間: ${data[i].time} ,地點:${data[i].theater}\n`
+        if(data[0].time == undefined){
+            bot.sendMessage(chatId,'QQ 沒東西喔')
+        }else{
+            let replay = ''
+            for (let i = 0; i < data.length; i++) {
+                replay = replay + `時間: ${data[i].time} ,地點:${data[i].theater}\n`
+            }
+            bot.sendMessage(chatId,  replay)
         }
-        bot.sendMessage(chatId,  replay)
+       
     })
         
+});
+bot.onText(/附近飲料/, function (msg, match) {
+    var option = {
+        "parse_mode": "Markdown",
+        "reply_markup": {
+            "one_time_keyboard": true,
+            "keyboard": [[{
+                text: "送出你的地理資訊",
+                request_location: true
+            }], ["取消"]]
+        }
+    };
+    bot.sendMessage(msg.chat.id, "已收到你的地理位置", option).then(() => {
+        bot.once("location",(msg)=>{
+            bot.sendMessage(msg.chat.id,`https://www.google.com.tw/maps/search/飲料/@${msg.location.latitude},${msg.location.longitude},17z`);
+        })
+    })
+
 });
 
 // bot.on('message',event=>{
