@@ -29,6 +29,7 @@ bot.on('message', function (event) {
                     let replay = ''
                     let forloop = (Number.parseInt(data.length / 40)) <= 0 ? 1 : (Number.parseInt(data.length / 40));
                     if (data[0].time != undefined) {
+                       
                         if (data.length > 40) {
                             if (forloop > 4) {
                                 forloop = 4
@@ -38,6 +39,7 @@ bot.on('message', function (event) {
                                 for (let i = k * 40; i < 40 * (k + 1); i++) {
                                     replay = replay + `時間: ${data[i].time} ,地點:${data[i].theater}\n`
                                 }
+                                replays.push(replay)
                             }
                             event.reply(replays)
                                 .then(() => { })
