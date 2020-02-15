@@ -28,5 +28,5 @@ Please connect Dandan for details on our code of conduct, and the process for su
 # To do
 - [x] line bot start
 - [x] add ssl for express
-- [ ] web crawler for movie data :point_left: next
+- [x] web crawler for movie data :point_left: next
 - [ ] bot string analysis 
